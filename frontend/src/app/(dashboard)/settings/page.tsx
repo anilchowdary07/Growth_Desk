@@ -1,0 +1,13 @@
+"use client";
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
+export default function SettingsRedirectPage() {
+  const router = useRouter();
+  useEffect(() => {
+    router.replace("/settings/ai-providers");
+  }, [router]);
+
+  return null;
+}
