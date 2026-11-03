@@ -56,3 +56,4 @@ class FallbackSimulationProvider(BaseAIProvider):
 
     async def test_connection(self) -> bool:
         return True
+
