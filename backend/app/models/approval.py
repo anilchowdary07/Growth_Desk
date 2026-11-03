@@ -44,3 +44,4 @@ class Approval(Base):
     # Relationships
     workspace: Mapped["Workspace"] = relationship("Workspace", lazy="selectin")  # noqa: F821
     reviewer: Mapped["User | None"] = relationship("User", lazy="selectin")  # noqa: F821
+

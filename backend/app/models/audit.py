@@ -34,3 +34,4 @@ class AuditLog(Base):
     # Relationships
     workspace: Mapped["Workspace | None"] = relationship("Workspace", lazy="selectin")  # noqa: F821
     user: Mapped["User | None"] = relationship("User", lazy="selectin")  # noqa: F821
+

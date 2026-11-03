@@ -37,3 +37,4 @@ class CommunityManager(BaseAgent):
             agent_name=self.name,
             metadata={"model": response.model, "provider": response.provider},
         )
+

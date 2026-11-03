@@ -23,3 +23,4 @@ def test_supported_models():
     assert "openai" in providers
     assert "anthropic" in providers
     assert "gemini" in providers
+

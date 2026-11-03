@@ -113,7 +113,19 @@ class AgentOrchestrator:
         )
 
         agent = self.agents.get(target_agent, self.agents["director"])
-        return await agent.execute(context, provider)
+        try:
+            return await agent.execute(context, provider)
+        except Exception as e:
+            logger.warning(f"Provider {provider.provider_name} call failed: {e}. Falling back to preview engine.")
+            from app.providers.fallback_provider import FallbackSimulationProvider
+            fallback = FallbackSimulationProvider(api_key="preview", model="growthdesk-strategy-v1")
+            res = await agent.execute(context, fallback)
+            res.response = (
+                f"> ℹ️ **Notice ({provider.provider_name})**: {str(e)}\n\n"
+                f"{res.response}"
+            )
+            return res
 
 
 orchestrator = AgentOrchestrator()
+

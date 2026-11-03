@@ -97,3 +97,4 @@ async def delete_lead(
         return StatusResponse(message="Lead deleted successfully")
     except ValueError as e:
         raise HTTPException(status_code=404, detail=str(e))
+

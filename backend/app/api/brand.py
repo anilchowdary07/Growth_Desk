@@ -95,3 +95,4 @@ async def query_knowledge_base(
     db: Annotated[AsyncSession, Depends(get_db)],
 ):
     return await brand_service.query_knowledge_base(db, workspace.id, data.query, data.limit)
+

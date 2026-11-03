@@ -63,3 +63,4 @@ class WorkspaceMemberResponse(BaseModel):
 class InviteMember(BaseModel):
     email: EmailStr
     role: str = "editor"  # owner, admin, editor, viewer
+

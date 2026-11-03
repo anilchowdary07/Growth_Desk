@@ -72,3 +72,4 @@ class LeadResponse(BaseModel):
     created_at: datetime
     updated_at: datetime
     activities: list[LeadActivityResponse] = []
+

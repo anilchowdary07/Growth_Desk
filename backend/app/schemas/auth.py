@@ -45,3 +45,4 @@ class UserResponse(BaseModel):
     is_superadmin: bool
     avatar_url: str | None
     created_at: datetime
+

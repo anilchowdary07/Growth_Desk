@@ -27,3 +27,4 @@ class OverviewAnalytics(BaseModel):
     leads_by_source: list[dict]
     top_content: list[dict]
     growth_recommendations: list[str]
+

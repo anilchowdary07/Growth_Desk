@@ -38,3 +38,4 @@ def test_fernet_encryption():
     assert encrypted != secret_key
     decrypted = decrypt_value(encrypted)
     assert decrypted == secret_key
+

@@ -32,9 +32,10 @@ class BaseAIProvider(ABC):
 
     provider_name: str
 
-    def __init__(self, api_key: str, model: str | None = None):
+    def __init__(self, api_key: str, model: str | None = None, base_url: str | None = None):
         self.api_key = api_key
         self.model = model or self.default_model
+        self.base_url = base_url
 
     @property
     @abstractmethod

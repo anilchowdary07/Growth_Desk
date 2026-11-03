@@ -63,3 +63,4 @@ class ConversationUpdate(BaseModel):
     priority: str | None = None
     classification: str | None = None
     auto_reply_enabled: bool | None = None
+

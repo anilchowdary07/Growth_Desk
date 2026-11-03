@@ -20,3 +20,4 @@ class AgentChatResponse(BaseModel):
     actions_taken: list[dict] = []
     delegations: list[dict] = []
     metadata: dict = {}
+

@@ -79,3 +79,4 @@ class Subscription(Base):
 
     # Relationships
     plan: Mapped["Plan"] = relationship("Plan", back_populates="subscriptions", lazy="selectin")
+

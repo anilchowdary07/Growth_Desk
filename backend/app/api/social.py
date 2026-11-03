@@ -105,3 +105,4 @@ async def cancel_scheduled_post(
         return StatusResponse(message="Post scheduled status cancelled")
     except ValueError as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(e))
+

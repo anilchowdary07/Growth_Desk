@@ -64,3 +64,4 @@ async def test_agent_execution_with_mock():
     result = await director.execute(context, provider)
     assert result.agent_name == "director"
     assert "Mock strategic recommendation" in result.response
+

@@ -173,3 +173,4 @@ class InboxService:
 
 
 inbox_service = InboxService()
+

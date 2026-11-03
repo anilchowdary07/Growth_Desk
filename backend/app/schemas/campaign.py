@@ -85,3 +85,4 @@ class CampaignResponse(BaseModel):
     tasks: list[CampaignTaskResponse] = []
     created_at: datetime
     updated_at: datetime
+

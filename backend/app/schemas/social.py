@@ -58,3 +58,4 @@ class ScheduledPostResponse(BaseModel):
     created_at: datetime
     content_title: str | None = None
     platform: str | None = None
+

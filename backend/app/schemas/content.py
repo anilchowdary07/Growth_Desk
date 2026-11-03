@@ -66,3 +66,4 @@ class ContentResponse(BaseModel):
     created_at: datetime
     updated_at: datetime
     versions: list[ContentVersionResponse] = []
+

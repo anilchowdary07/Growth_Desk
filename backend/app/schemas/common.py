@@ -22,3 +22,4 @@ class StatusResponse(BaseModel):
 
 class ErrorResponse(BaseModel):
     detail: str
+

@@ -31,6 +31,7 @@ class AIProvider(Base):
     is_active: Mapped[bool] = mapped_column(Boolean, default=True, nullable=False)
     is_default: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
     default_model: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    base_url: Mapped[str | None] = mapped_column(String(1024), nullable=True)
     last_verified_at: Mapped[datetime | None] = mapped_column(
         DateTime(timezone=True), nullable=True
     )

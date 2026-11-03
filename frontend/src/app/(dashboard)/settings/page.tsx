@@ -11,3 +11,4 @@ export default function SettingsRedirectPage() {
 
   return null;
 }
+

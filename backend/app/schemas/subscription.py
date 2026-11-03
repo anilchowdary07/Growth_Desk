@@ -39,3 +39,4 @@ class SubscriptionResponse(BaseModel):
 class UpgradeRequest(BaseModel):
     plan_name: str  # starter, professional, agency
     billing_period: str = "monthly"  # monthly, yearly
+

@@ -93,3 +93,4 @@ class BrandQueryResponse(BaseModel):
     query: str
     context: str
     relevant_documents: list[dict]
+

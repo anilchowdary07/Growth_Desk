@@ -104,3 +104,4 @@ async def update_me(
 ):
     updated = await auth_service.update_profile(db, current_user.id, data)
     return UserResponse.model_validate(updated)
+

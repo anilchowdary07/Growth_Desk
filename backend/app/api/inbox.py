@@ -100,3 +100,4 @@ async def create_lead_from_conversation(
         return LeadResponse.model_validate(lead)
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
+

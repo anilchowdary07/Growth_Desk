@@ -13,3 +13,4 @@ def run_agent_task(workspace_id: str, agent_type: str, task_payload: dict):
     """Execute a heavy multi-step agent research or content batch generation."""
     logger.info(f"Running background agent task for {agent_type} in workspace {workspace_id}")
     return {"status": "completed", "agent": agent_type}
+

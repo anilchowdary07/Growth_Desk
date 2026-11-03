@@ -21,3 +21,4 @@ def check_scheduled_posts():
     """Periodic task: scan for scheduled posts due for publication."""
     logger.info("Scanning for due scheduled posts...")
     return {"scanned": True}
+

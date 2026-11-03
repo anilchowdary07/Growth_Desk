@@ -43,3 +43,4 @@ async def upgrade_plan(
         return SubscriptionResponse.model_validate(sub)
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
+

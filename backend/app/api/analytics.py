@@ -21,3 +21,4 @@ async def get_overview(
     db: Annotated[AsyncSession, Depends(get_db)],
 ):
     return await analytics_service.get_overview(db, workspace.id)
+

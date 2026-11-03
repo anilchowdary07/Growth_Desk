@@ -13,6 +13,7 @@ from app.models.workspace import Workspace
 from app.schemas.ai_provider import (
     AIProviderCreate,
     AIProviderResponse,
+    AIProviderTestKeyRequest,
     AIProviderTestResult,
     AIProviderUpdate,
     ModelInfo,
@@ -69,6 +70,15 @@ async def delete_provider(
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(e))
 
 
+@router.post("/test-key", response_model=AIProviderTestResult)
+async def test_raw_key(
+    data: AIProviderTestKeyRequest,
+    _workspace: Annotated[Workspace, Depends(get_current_workspace)],
+):
+    """Test any API key before saving it to verify connectivity and credentials."""
+    return await ai_provider_service.test_raw_key(data)
+
+
 @router.post("/{provider_id}/test", response_model=AIProviderTestResult)
 async def test_provider(
     provider_id: UUID,
@@ -84,3 +94,4 @@ async def test_provider(
 @router.get("/models", response_model=list[ModelInfo])
 async def list_models():
     return ai_provider_service.get_supported_models()
+
